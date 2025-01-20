@@ -1,36 +1,16 @@
-class fiets:
+class Fiets:
     def __init__(self, nummer, klassiek=False, elektrisch=False, leenbaar=None):
-        self.elektrisch=elektrisch
-        self.klassiek=klassiek
-        self.leenbaar=leenbaar
-        self.nummer=nummer
-    def fiets_lenen(self):
-        if self.leenbaar:
-            print("lenen gelukt!!!!")
-class fiets22:
-    def __init__(self, nummer, klassiek=False, elektrisch=False, leenbaar=None):
-        self.elektrisch=elektrisch
-        self.klassiek=klassiek
-        self.leenbaar=leenbaar
-        self.nummer=nummer
-    def fiets2_lenen(self):
-        if self.leenbaar:
-            return "(info: {} )".format(self.nummer,self.leenbaar)
-    def __repr__(self):
-        return fiets2_lenen
-        
-        
-                  
+        self.elektrisch = elektrisch
+        self.klassiek = klassiek
+        self.leenbaar = leenbaar
+        self.nummer = nummer
 
+    def __str__(self):
+        return "Fietsnummer: {}, Klassiek: {}, Elektrisch: {}, Leenbaar: {}".format(self.nummer, self.klassiek, self.elektrisch, self.leenbaar)
 
+# Voorbeeld:
+fiets1 = Fiets(1, klassiek=True)
+fiets2 = Fiets(2, elektrisch=True, leenbaar=False)
 
-        
-
-
-
-
-fiets1=fiets(1,"klassiek")
-fiets2=fiets22(2,"elektrisch", leenbaar=False)
-print(fiets2)
-
-
+print(fiets1)  # Dit zou de __str__ methode aanroepen
+print(fiets2)  # Dit zou de __str__ methode aanroepen
