@@ -12,10 +12,6 @@ class klassen:
             print("leerling uitgeschreven")
             status=""
             print(status)
-    def resultaat(self):
-        if self.id==0 and self.status=="ingeschreven":
-            if self.id==1 and self.status=="uitgeschreven":
-                print('test')
 
 
 
