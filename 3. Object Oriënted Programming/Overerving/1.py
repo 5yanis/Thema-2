@@ -10,5 +10,4 @@ class student(persoon):
 
 persoon1=persoon("Yanis", "Rabah")
 student1=student("Zakaria", "el iraki")
-print(persoon1)
-print(student1)
+
