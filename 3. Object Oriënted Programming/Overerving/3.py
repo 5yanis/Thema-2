@@ -1,10 +1,11 @@
 class persoon:
-    def __init__(self, naam, medewerker=False):
+    def __init__(self, naam):
         self.naam=naam
         self.medewerker=medewerker
     def krijg_naam(self):
         return "naam: {}".format(self.naam)
-    def isMedewerker(self):
+    def isMedewerker(self, medewerker=False):
+        self.medewerker=medewerker
         return "Klasse: {}".format(self.medewerker)
 
 
