@@ -56,7 +56,7 @@ class MyGrid(GridLayout):
 
     # Inside Rij 1 
 
-        self.inside.add_widget(Label(text="Naam: ")) 
+        self.inside.add_widget(Label(text="Naam: "))
 
         self.naam = TextInput(multiline = False) 
 
@@ -64,29 +64,51 @@ class MyGrid(GridLayout):
 
     # Inside Rij 2
 
-        self.inside.add_widget(Label(text="Achternaam")) 
-
-        self.achternaam = TextInput(multiline = False) 
-
-        self.inside.add_widget(self.achternaam) 
-
-    # Inside Rij 3 
-
-        self.inside.add_widget(Label(text="E-mail")) 
+        self.inside.add_widget(Label(text="e-mail")) 
 
         self.mail = TextInput(multiline = False) 
 
         self.inside.add_widget(self.mail) 
 
-    # De 3 rijen van inside als eerste rij in het hoofdraster invoegen. 
+    # Inside Rij 3 
 
-        self.add_widget(self.inside) 
+        self.inside.add_widget(Label(text="Bericht")) 
 
-        # Hoofdraster rij 2. 
+        self.bericht = TextInput(multiline = True) 
 
-        self.submit = Button(text="Indienen", font_size=40) 
+        self.inside.add_widget(self.bericht) 
 
-        self.add_widget(self.submit) 
+
+    # Hoofdraster rij 2. 
+
+        self.inside.submit = Button(text="Indienen", font_size=40) 
+
+         #Knop binden aan functie pressed. 
+
+        self.inside.submit.bind(on_press = self.pressed) 
+
+        self.inside.add_widget(self.submit) 
+    # Functie die actie toevoegt voor wanneer er op de knop gedrukt wordt. 
+
+    def pressed(self, instance): 
+
+        # We halen de tekst uit de inputvelden op. 
+
+        naam = self.naam.text 
+
+        bericht = self.bericht.text 
+
+        mail = self.mail.text 
+
+        print("Naam: {}, E-mail: {}, bericht: {}".format(naam, mail, bericht)) 
+
+        # We maken de velden leeg. 
+
+        self.naam.text = "" 
+
+        self.bericht.text = "" 
+
+        self.mail.text = "" 
 
 class MyApp(App): 
 
