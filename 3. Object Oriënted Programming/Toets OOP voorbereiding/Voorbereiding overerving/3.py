@@ -8,7 +8,6 @@ class persoon:
         
 class medewerker(persoon):
     def medewerker(self):
-        super().krijgnaam()
         return "True"
     
 persoon1=persoon("Jan")

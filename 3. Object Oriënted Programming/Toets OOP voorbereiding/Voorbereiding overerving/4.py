@@ -17,5 +17,6 @@ class kleinkind(kind):
         return self.adres
 
 
+
 Lana=kleinkind("Lana", 15, "Turnhout")
 print(Lana.krijgnaam(), Lana.krijg_leeftijd(), Lana.krijg_adres())
